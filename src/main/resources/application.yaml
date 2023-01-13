@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      base-path: "/mon"
+      exposure:
+        include: "health, info, heapdump, beans, threaddump"
+    jmx:
+      exposure:
+        exclude: "*"
+  endpoint:
+    health:
+      enabled: true
+    heapdump:
+      enabled: true
+    beans:
+      enabled: true
+    info:
+      enabled: true
+    threaddump:
+      enabled: true
+  server:
+    port: 8082
+
